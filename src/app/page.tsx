@@ -3,9 +3,10 @@ import styles from './page.module.css'
 import { CssBaseline} from '@mui/material'
 import {Container} from '@mui/material'
 import {Typography} from '@mui/material'
+import Box from '@mui/material/Box';
 import {ThemeProvider} from '@mui/material'
 import { createTheme } from '@mui/material'
-import NavigationBar from '../components/navigationBar'
+import NavigationBara from '../components/navigationBar'
 import Head from 'next/head'
 // import {selfTheme} from '../styles/selfTheme'
 import SimpleSlider from '@/pages/simpleSlider'
@@ -15,38 +16,37 @@ import SimpleSlider from '@/pages/simpleSlider'
 export default function Home() {
  
   return (
-    <>
-    <div className={styles.content}>
-    <Head>
-        <title>Core Web Vitals</title>
-        <meta name="description" content="Core web vitals walk through" />
-        <link rel="icon" href="/favicon.ico" /> 
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter"
-          rel="stylesheet"
-        />
-        asdads
-      </Head>
-    {/* 全局样式 */}
+    <Box sx={{ display: 'flex' }}>
     <CssBaseline />
-    {/* 导航栏 */}
-    <NavigationBar/>
-    {/* 轮播图 */}
-    <SimpleSlider/>
-    {/* 文章列表 */}
-    {/* Food */}
-    {/* <SimpleSlider/> */}
-    {/* <ClientRenderComponent/> */}
-    <main className={styles.main}>
-      <Container maxWidth="xl">
-        <Typography component="div" style={{ backgroundColor: '#fff', height: '100vh',border: '1px solid grey' }} />
-      </Container>
-    </main>
+    <div className={styles.content}>
+      <Head>
+          <title>Core Web Vitals</title>
+          <meta name="description" content="Core web vitals walk through" />
+          <link rel="icon" href="/favicon.ico" /> 
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter"
+            rel="stylesheet"
+          />
+          <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </Head>
+      {/* 导航栏 */}
+      <NavigationBara/>
+      {/* 轮播图 */}
+      <SimpleSlider/>
+      {/* 文章列表 */}
+      {/* Food */}
+      {/* <SimpleSlider/> */}
+      {/* <ClientRenderComponent/> */}
+      <main className={styles.main}>
+        <Container maxWidth="xl">
+          <Typography component="div" style={{ backgroundColor: '#fff', height: '100vh',border: '1px solid grey' }} />
+        </Container>
+      </main>
     </div>
-    </>
+    
   
     
-    // <main className={styles.main}>
+    {/* // <main className={styles.main}>
     //   <Head>
     //     <title>Core Web Vitals</title>
     //     <meta name="description" content="Core web vitals walk through" />
@@ -145,6 +145,7 @@ export default function Home() {
     //       </p>
     //     </a>
     //   </div>
-    // </main>
+    // </main> */}
+    </Box>
   )
 }

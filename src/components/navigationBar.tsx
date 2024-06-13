@@ -1,40 +1,57 @@
 import Link from 'next/link'
-import { Typography,Breadcrumbs } from '@mui/material';
-import Button from '@mui/material/Button';
-import styles from '../app/page.module.css'
+import { Breadcrumbs } from '@mui/material';
+// import Button from '@mui/material/Button';
+import styles from '../app/page.module.css';
 
-const navigationBar = () => (
-  // 头部
-  <header className = {styles.mainHander}>
-    {/* 头部中间元素定位 */}
-    <div className = {styles.container}>
-      <a className = {styles.log}>
-        <img src="/vercel.svg"/>
-      </a>
-      <div>
-        <Breadcrumbs aria-label="breadcrumb">
-            <Link color="inherit" href="/" >
-                首页
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import MenuIcon from '@mui/icons-material/Menu';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+
+function navigationBar() {
+  return (
+    <header className={styles.mainHander}>
+      {/* 头部中间元素定位 */}
+      <div className={styles.container}>
+        <a className={styles.log}>
+          <img src="/vercel.svg" />
+        </a>
+        <div>
+          <Button variant="contained">Hello world</Button>
+          <Breadcrumbs aria-label="breadcrumb">
+            <Link color="inherit" href="/">
+              首页
             </Link>
             <Link color="inherit" href="/post/abc">
-            标题1
+              标题1
+            </Link>
+            <Link color="inherit" href="/about">
+              标题1
             </Link>
             <Link color="inherit" href="/">
-             标题1
+              标题1
             </Link>
             <Link color="inherit" href="/">
-                标题1
+              标题1
             </Link>
             <Link color="inherit" href="/">
-                标题1
+              标题1
             </Link>
-            <Link color="inherit" href="/">
-                标题1
-            </Link>
-        </Breadcrumbs>
+          </Breadcrumbs>
+        </div>
       </div>
-    </div>
-    <ul>
+      <ul>
         <li>
           <Link href="/post/abc">
             Go to pages/post/[pid].js
@@ -67,7 +84,43 @@ const navigationBar = () => (
           </Link>
         </li>
       </ul>
-  </header>
-)
+    </header>
+  );
+}
 
-export default navigationBar
+const drawerWidth = 240;
+const navItems = ['Home', 'About', 'Contact'];
+
+export default function navigationBara () {
+  return (<AppBar component="nav">
+  <Toolbar>
+  <div className={styles.container}>
+        <a className={styles.log}>
+          <img src="/vercel.svg" />
+        </a>
+        <div>
+          <Breadcrumbs aria-label="breadcrumb">
+            <Link color="inherit" href="/">
+              首页
+            </Link>
+            <Link color="inherit" href="/post/abc">
+              标题1
+            </Link>
+            <Link color="inherit" href="/about">
+              标题1
+            </Link>
+            <Link color="inherit" href="/">
+              标题1
+            </Link>
+            <Link color="inherit" href="/">
+              标题1
+            </Link>
+            <Link color="inherit" href="/">
+              标题1
+            </Link>
+          </Breadcrumbs>
+        </div>
+      </div>
+  </Toolbar>
+</AppBar>)
+}

@@ -32,3 +32,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+components/：存放可复用的组件。
+pages/：包含各个页面组件。
+styles/：放置样式相关文件，如 CSS 模块等。
+utils/：存放工具函数等辅助代码。
+public/：用于存放静态资源，如图片等。
+package.json：项目依赖配置。
+.gitignore：定义忽略的文件和目录。
